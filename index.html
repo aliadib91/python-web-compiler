@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>مفسر آنلاین پایتون</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: sans-serif;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+    body.light {
+      background-color: #f5f5f5;
+      color: #222;
+    }
+    textarea {
+      width: 100%;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #333;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    body.light textarea {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      border-radius: 5px;
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #toggleTheme {
+      background-color: #2196f3;
+    }
+    #toggleTheme:hover {
+      background-color: #1976d2;
+    }
+    #clearOutput {
+      background-color: #f44336;
+    }
+    #clearOutput:hover {
+      background-color: #d32f2f;
+    }
+    pre {
+      background-color: #1e1e1e;
+      color: #00ff99;
+      padding: 10px;
+      white-space: pre-wrap;
+      border: 1px solid #333;
+      margin-top: 10px;
+      min-height: 100px;
+      transition: all 0.3s ease;
+    }
+    body.light pre {
+      background-color: #eee;
+      color: #333;
+      border: 1px solid #bbb;
+    }
+    .error {
+      color: #ff4c4c;
+    }
+    .success {
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <h2>مفسر آنلاین پایتون </h2>
+
+  <textarea id="code" rows="10" placeholder="کد پایتون را اینجا بنویس...">print("سلام دنیا!")</textarea><br>
+
+  <button onclick="runPython()">▶️ اجرا</button>
+  <button id="clearOutput" onclick="clearOutput()"> پاک کردن خروجی</button>
+  <button id="toggleTheme" onclick="toggleTheme()"> تغییر تم</button>
+
+  <h3>خروجی:</h3>
+  <pre id="output">...</pre>
+
+  <!-- بارگذاری Pyodide -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
